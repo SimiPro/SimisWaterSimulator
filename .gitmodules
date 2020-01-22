@@ -1,0 +1,12 @@
+[submodule "external/bigg"]
+	path = external/bigg
+	url = https://github.com/JoshuaBrookover/bigg.git
+[submodule "external/tinyobjloader"]
+	path = external/tinyobjloader
+	url = https://github.com/syoyo/tinyobjloader.git
+[submodule "external/rand-util"]
+	path = external/rand-util
+	url = https://github.com/yuki-koyama/rand-util.git
+[submodule "external/string-util"]
+	path = external/string-util
+	url = https://github.com/yuki-koyama/string-util.git

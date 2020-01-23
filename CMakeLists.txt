@@ -47,13 +47,16 @@ set(headers
   ${CMAKE_CURRENT_SOURCE_DIR}/include/bigger/primitives/mesh-primitive.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/include/bigger/primitives/plane-primitive.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/include/bigger/primitives/sphere-primitive.hpp
-)
+
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/maths.h
+
+        )
 set(sources
   ${CMAKE_CURRENT_SOURCE_DIR}/src/app.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/dynamic-mesh-primitive.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/mesh-primitive.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/utils.cpp
-)
+        )
 set(shaders
   ${CMAKE_CURRENT_SOURCE_DIR}/shaders/blinnphong/vs_blinnphong.sc
   ${CMAKE_CURRENT_SOURCE_DIR}/shaders/blinnphong/fs_blinnphong.sc
@@ -70,6 +73,10 @@ add_shader(${CMAKE_CURRENT_SOURCE_DIR}/shaders/blinnphong/vs_blinnphong.sc VERTE
 add_shader(${CMAKE_CURRENT_SOURCE_DIR}/shaders/blinnphong/fs_blinnphong.sc FRAGMENT OUTPUT ${BIGGER_SHADER_OUTPUT_DIR} DX11_MODEL 5_0 GLSL 130)
 
 option(BIGGER_EXAMPLES ON "")
+
+add_executable(SimisWaterSimulator ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
+target_link_libraries(SimisWaterSimulator bigger)
+
 if(BIGGER_EXAMPLES)
   add_executable(minimal ${CMAKE_CURRENT_SOURCE_DIR}/examples/minimal/main.cpp)
   target_link_libraries(minimal bigger)

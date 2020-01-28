@@ -77,6 +77,7 @@ option(BIGGER_EXAMPLES ON "")
 add_executable(SimisWaterSimulator ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
 target_link_libraries(SimisWaterSimulator bigger)
 
+set(BIGGER_EXAMPLES True)
 if(BIGGER_EXAMPLES)
   add_executable(minimal ${CMAKE_CURRENT_SOURCE_DIR}/examples/minimal/main.cpp)
   target_link_libraries(minimal bigger)

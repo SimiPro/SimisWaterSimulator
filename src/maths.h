@@ -63,7 +63,7 @@ namespace simi::math {
         // dot(sample(x), gradient(x))
         virtual double divergence(const Vec3d& x) const = 0;
         // dot(laplacian, gradient)
-        virtaul double curl()
+        virtual double curl()
     };
 
     struct ExampleScalarField : ScalarField3 {
